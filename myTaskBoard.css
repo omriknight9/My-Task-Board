@@ -1,0 +1,200 @@
+
+@font-face {
+	font-family: "myFont";
+	src: url("fonts/BerkshireSwash-Regular.ttf");
+
+}
+
+body {
+	background-image: url("images/tile.jpg");
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#imgDiv {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+#imgDiv img {
+	width: 380px;
+	transition: 1s;
+}
+
+#form {
+	margin-top: 50px;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+#form textarea {
+	background-image: url("images/formbg.jpg");
+	line-height: 32px;
+	background-repeat: no-repeat;
+	padding-left: 11%;
+	padding-top: 3%;
+	font-size: 25px;
+	color: black;
+	width: 100%;
+	min-height: 390px;
+	max-height: 450px;
+	font-family: "Trocchi";
+
+}
+
+#form textarea::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#form textarea::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+#form textarea::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,left bottom,left top,
+	color-stop(0.44, rgb(122,153,217)),
+	color-stop(0.72, rgb(73,125,189)),
+	color-stop(0.86, rgb(28,58,148)));
+}
+
+.note-title::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.note-title::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+.note-title::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,left bottom,left top,
+	color-stop(0.44, rgb(122,153,217)),
+	color-stop(0.72, rgb(73,125,189)),
+	color-stop(0.86, rgb(28,58,148)));
+}
+
+
+.form-row {
+	width: 99%;
+	margin-left: 2px;
+}
+
+#submitInput {
+	background-color: blue;
+	color: white;
+}
+
+.note {
+	position: relative;
+	background-image: url("images/notebg.png");
+	width: 170px;
+	height: 250px;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+	animation: fadeIn 1.5s;
+	font-family: "myFont";
+
+}
+
+.note:hover > button {
+	opacity: 1;
+}
+
+.note:hover > .trashLid {
+	opacity: 1;
+
+}
+
+.btn {
+	position: absolute;
+	top: 30px;
+	left: 120px;
+	height: 20px;
+	opacity: 0;
+  	transition: opacity 0.25s ease-in-out;
+  	cursor: pointer;
+  	clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+
+}
+
+
+.trashLid {
+	position: absolute;
+	width: 45px;
+	right: 11.5px;
+	height: 50px;
+	top: -22px;
+	/*clip-path: ellipse(30% 8%);*/
+	clip-path: polygon(50% 80%, 15% 100%, 85% 100%);
+	border-radius: 5px;
+	opacity: 0;
+  	transition: opacity 0.25s ease-in-out;
+	background-color: lightgrey;
+}
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		margin-left: -500px;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#note-div {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+.note-date {
+	margin-left: 8%;
+
+}
+
+.note-time {
+	margin-left: 8%;
+	margin-top: -5%;
+}
+
+.note-title {
+	width: 155px;
+	height: 100px;
+	word-wrap: break-word;
+	overflow-y: auto;
+	padding: 0;
+	margin-left: 8%;
+	margin-top: 29%;
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+
+
+
+@media screen and (max-width: 767px) {
+	#imgDiv img {
+		width: 270px;
+	}	
+}
+
+@media screen and (max-width: 769px) {
+
+	.form-row {
+		top: 185px;
+	}	
+}

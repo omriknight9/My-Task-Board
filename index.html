@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>First Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="myTaskBoard.css">
+        <link href="https://fonts.googleapis.com/css?family=Trocchi" rel="stylesheet">
+        
+
+    </head>
+    <body>
+        <header>
+
+            <div id="imgDiv">s
+                <img src="images/title.png" alt="Title img">
+            </div>
+        </header>
+
+        <main>
+
+
+            <form id="form">
+
+                <div class="form-group">
+                    <textarea name="textArea" id="textArea" cols="40" rows="10" class="form-control" placeholder="Enter the next task" required oninput="taskValidity();"></textarea>
+                    <div class="form-row">
+                        <div class="form-group col-md-4 col-12">
+                            <input type="date" class="form-control" id="dateInput" name="dateInput" required oninput="dateValidity();">
+                        </div>
+                        <div class="form-group col-md-4 col-12">
+                            <input type="time" class="form-control" id="timeInput" name="timeInput" required oninput="timeValidity();">
+                        </div>
+                        <div class="form-group col-md-4 col-12">
+                            <input type="submit" value="Send" class="form-control" id="submitInput" name="submitInput">
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+            
+            <div id="note-div">
+                
+            </div>
+            
+        </main>
+        
+        
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="bootstrap.min.js"></script>
+
+        <script src="myTaskBoard.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </body>
+</html>
