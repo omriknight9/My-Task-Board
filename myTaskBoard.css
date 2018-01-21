@@ -44,6 +44,7 @@ body {
 	min-height: 390px;
 	max-height: 450px;
 	font-family: "Trocchi";
+	transition: 1s;
 
 }
 
