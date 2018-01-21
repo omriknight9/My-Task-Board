@@ -54,13 +54,48 @@ function createNote (arr) {
 	var text = document.createElement("p");
 	var dateParagraph = document.createElement("p");
 	var timeParagraph = document.createElement("p");
+	var btn = document.createElement("button");
+	var timeDiv = document.createElement("div");
 
 	var lid = document.createElement("div");
 	lid.classList.add("trashLid");
 
 	note.classList.add("note");
 	text.classList.add("note-title");
-	text.setAttribute("contenteditable", true);
+
+	text.addEventListener("dblclick", function () {
+		text.remove();
+		var textValue = text.textContent;
+		var textArea = document.createElement("textarea");
+		var saveBtn = document.createElement("button");
+		textArea.textContent = textValue;
+		textArea.setAttribute("placeholder", textValue);
+		textArea.style.maxHeight = "90px";
+		textArea.style.minHeight = "90px";
+		textArea.classList.add("note-title");
+		saveBtn.textContent = "Save";
+		saveBtn.classList.add("edit-btn");
+		timeDiv.insertAdjacentElement("beforebegin", textArea);
+		note.append(saveBtn);
+
+		saveBtn.addEventListener("click", function () {
+			var txt = arr.task;
+			textArea.remove();
+			saveBtn.remove();
+			text.textContent = textArea.value;
+			timeDiv.insertAdjacentElement("beforebegin", text);
+			txt = textArea.value;
+
+			var notes = document.querySelectorAll(".note");
+			var i = Array.from(notes).indexOf(note);
+			tasks[i].task = textArea.value
+
+			updateBackup(tasks);
+
+		});
+		
+	});
+	
 
 
 	dateParagraph.classList.add("note-date");
@@ -71,11 +106,11 @@ function createNote (arr) {
 
 	note.append(lid);
 	note.append(text);
-	note.append(dateParagraph);
-	note.append(timeParagraph);
+	timeDiv.append(dateParagraph);
+	timeDiv.append(timeParagraph);
+	note.appendChild(timeDiv);
 	noteDiv.appendChild(note);
 
-	var btn = document.createElement("button");
 	btn.classList.add("btn");
 
 	note.appendChild(btn);
