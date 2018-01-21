@@ -86,7 +86,7 @@ function createNote (arr) {
   		$('.btn').hover(function() {
     	$(".trashLid").css("transform", "translateY(-10px) rotate(-45deg)");
     	$(".trashLid").css("transition", ".5s");
-        }, function(){
+        }, function() {
     		$(".trashLid").css("transform", "translateY(-1px");
     
     	});

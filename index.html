@@ -15,33 +15,35 @@
     <body>
         <header>
 
-            <div id="imgDiv">s
+            <div id="imgDiv">
                 <img src="images/title.png" alt="Title img">
             </div>
         </header>
 
         <main>
 
+            <div id="formDiv">
+                
+                <form id="form">
 
-            <form id="form">
+                    <div class="form-group">
+                        <textarea name="textArea" id="textArea" cols="40" rows="10" class="form-control" placeholder="Enter the next task" required oninput="taskValidity();"></textarea>
+                        <div class="form-row">
+                            <div class="form-group col-md-4 col-12">
+                                <input type="date" class="form-control" id="dateInput" name="dateInput" required oninput="dateValidity();">
+                            </div>
+                            <div class="form-group col-md-4 col-12">
+                                <input type="time" class="form-control" id="timeInput" name="timeInput" required oninput="timeValidity();">
+                            </div>
+                            <div class="form-group col-md-4 col-12">
+                                <input type="submit" value="Send" class="form-control" id="submitInput" name="submitInput">
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <textarea name="textArea" id="textArea" cols="40" rows="10" class="form-control" placeholder="Enter the next task" required oninput="taskValidity();"></textarea>
-                    <div class="form-row">
-                        <div class="form-group col-md-4 col-12">
-                            <input type="date" class="form-control" id="dateInput" name="dateInput" required oninput="dateValidity();">
-                        </div>
-                        <div class="form-group col-md-4 col-12">
-                            <input type="time" class="form-control" id="timeInput" name="timeInput" required oninput="timeValidity();">
-                        </div>
-                        <div class="form-group col-md-4 col-12">
-                            <input type="submit" value="Send" class="form-control" id="submitInput" name="submitInput">
-                        </div>
                     </div>
 
-                </div>
-
-            </form>
+                </form>
+            </div>
             
             <div id="note-div">
                 

@@ -23,6 +23,13 @@ body {
 	transition: 1s;
 }
 
+#formDiv {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 #form {
 	margin-top: 50px;
 	display: flex;
@@ -30,6 +37,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 100%;
+	transition: 1s;
 }
 
 #form textarea {
@@ -119,8 +127,8 @@ body {
 .btn {
 	position: absolute;
 	top: 30px;
-	left: 120px;
-	height: 20px;
+	right: 21px;
+	height: 22px;
 	opacity: 0;
   	transition: opacity 0.25s ease-in-out;
   	cursor: pointer;
@@ -131,8 +139,8 @@ body {
 .trashLid {
 	position: absolute;
 	width: 45px;
-	right: 11.5px;
 	height: 50px;
+	right: 11.5px;
 	top: -22px;
 	clip-path: polygon(50% 80%, 15% 100%, 85% 100%);
 	border-radius: 5px;
@@ -162,12 +170,13 @@ body {
 
 .note-date {
 	margin-left: 8%;
-
+	transition: 1s;
 }
 
 .note-time {
 	margin-left: 8%;
 	margin-top: -5%;
+	transition: 1s;
 }
 
 .note-title {
@@ -181,13 +190,13 @@ body {
 	border: none;
 	background-color: transparent;
 	outline: none;
+	transition: 1s;
 }
 
 
 @media screen and (max-width: 700px) {
 	#form textarea {
 		padding-left: 14%;
-
 
 	}
 }
@@ -196,36 +205,55 @@ body {
 @media screen and (max-width: 767px) {
 	#imgDiv img {
 		width: 270px;
-	}	
-}
-
-@media screen and (max-width: 769px) {
-
-	.form-row {
-		top: 185px;
-	}	
-}
-
-@media screen and (max-width: 550px) {
-	#form textarea {
-		padding-left: 17%;
-		padding-top: 4%;
-
 	}
-}
 
-@media screen and (max-width: 430px) {
-	#form textarea {
-		padding-left: 18%;
-
-
+	#form {
+		width: 50%;
 	}
-}
-
-@media screen and (max-width: 380px) {
 	#form textarea {
 		padding-left: 22%;
+		padding-top: 7%;
 
+	}
+	.form-row {
+		top: 185px;
+	}
+
+	.note {
+		transform: scale(0.8);
+
+	}
+
+	.note-title {
+		font-size: 13px;
+	}
+
+	.note-date {
+		font-size: 13px;
+
+	}
+
+	.note-time {
+		font-size: 13px;
+	}
+
+
+}
+
+@media screen and (max-width: 600px) {
+	#form textarea {
+		padding-left: 30%;
+		padding-top: 5%;
 
 	}
 }
+
+@media screen and (max-width: 450px) {
+	#form textarea {
+		padding-left: 37%;
+		padding-top: 7%;
+
+	}
+}
+
+
